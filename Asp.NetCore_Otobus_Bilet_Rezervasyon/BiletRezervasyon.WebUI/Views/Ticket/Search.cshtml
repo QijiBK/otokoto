@@ -1,0 +1,21 @@
+﻿@model Ticket
+    <div class="row">
+       
+        <div class="col-md-9">
+            <div class="row">
+               <div class="col-md-4">
+                        <h5>Name:@Model.PassengerFirstName</h5>
+                        <h5>Gender:@Model.PassengerGender</h5>
+                        <h5>Mail:@Model.PassengerMail</h5>
+                        <h5>Phone:@Model.PassengerPhone</h5>
+                        <h5>Boarding Point:@Model.BoardingPoint</h5>
+                        <h5>Destination:@Model.Destination</h5>
+                        <h5>SeatNo:@Model.SeatNo</h5>
+                    </div>
+                     <form asp-action="TicketDelete" method="post" class="d-inline">
+                                <input type="hidden" name="ticketId" value="@Model.TicketId" />
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+            </div>
+        </div>
+    </div>

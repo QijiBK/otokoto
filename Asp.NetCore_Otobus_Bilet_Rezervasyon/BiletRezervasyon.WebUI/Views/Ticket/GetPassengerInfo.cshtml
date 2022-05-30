@@ -1,0 +1,92 @@
+﻿@model Ticket
+<center>
+<div class="card">
+  <h5 class="card-header">Sehir isimleri gelecek</h5>
+  <center>
+  <div class="card-body col-2 center">
+    <form class="row gy-2 gx-3 align-items-center my-4 d-flex justify-content-around" asp-controller="Ticket" asp-action="CreateTicket">
+    <input type="hidden" asp-for="TicketId">
+    <input type="hidden" asp-for="BusId" value="@ViewBag.busId">
+    <input type="hidden" asp-for="RouteId" value="@ViewBag.routeId">
+    <input type="hidden" asp-for="SeatNo" value="@ViewBag.seatNo">
+    <input type="hidden" asp-for="BoardingPoint" value="@ViewBag.fromWhere">
+    <input type="hidden" asp-for="Destination" value="@ViewBag.toWhere">
+    <input type="hidden" asp-for="PnrNo" value="@ViewBag.pnr" >
+    
+    <div class="col-auto">
+        <label class="visually-hidden">Ad:</label>
+        <input type="text" class="form-control" placeholder="Enter Name." asp-for="PassengerFirstName">
+    </div>
+    <div class="col-auto">
+        <label class="visually-hidden">Soyad:</label>
+        <input type="text" class="form-control" placeholder="Enter Surname" asp-for="PassgerLastName">
+    </div>
+     <div class="col-auto">
+        <label class="visually-hidden">Phone:</label>
+        <input type="text" class="form-control" placeholder="Enter Phone Number." asp-for="PassengerPhone">
+    </div>
+     <div class="col-auto">
+        <label class="visually-hidden">Identity Number:</label>
+        <input type="text" class="form-control" placeholder="Enter Identity" asp-for="PassengerIdentity">
+    </div>
+    <div class="col-auto">
+        <label class="visually-hidden">Cinsiyet:</label>
+        <select class="form-select" asp-for="PassengerGender">
+            <option value="Kadın">Kadın</option>
+            <option value="Erkek">Erkek</option>
+        </select>
+    </div>
+    <div class="col-auto">
+        <label class="visually-hidden">Mail:</label>
+        <input type="email" class="form-control" placeholder="Mail Adresinizi Giriniz." asp-for="PassengerMail">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Book this seat!!</button>
+    </div>
+</form>
+  </div>
+  </center>
+</div> 
+
+</center>
+
+
+
+@*<form class="row gy-2 gx-3 align-items-center my-4 d-flex justify-content-around" asp-controller="Ticket" asp-action="CreateTicket">
+    <input type="hidden" asp-for="TicketId">
+    <input type="hidden" asp-for="BusId" value="@ViewBag.busId">
+    <input type="hidden" asp-for="RouteId" value="@ViewBag.routeId">
+    <input type="hidden" asp-for="SeatNo" value="@ViewBag.seatNo">
+    <input type="hidden" asp-for="BoardingPoint" value="@ViewBag.fromWhere">
+    <input type="hidden" asp-for="Destination" value="@ViewBag.toWhere">
+    <div class="col-auto">
+        <label class="visually-hidden">Ad:</label>
+        <input type="text" class="form-control" placeholder="Enter Name." asp-for="PassengerFirstName">
+    </div>
+    <div class="col-auto">
+        <label class="visually-hidden">Soyad:</label>
+        <input type="text" class="form-control" placeholder="Enter Surname" asp-for="PassgerLastName">
+    </div>
+     <div class="col-auto">
+        <label class="visually-hidden">Phone:</label>
+        <input type="text" class="form-control" placeholder="Enter Phone Number." asp-for="PassengerPhone">
+    </div>
+     <div class="col-auto">
+        <label class="visually-hidden">Identity Number:</label>
+        <input type="text" class="form-control" placeholder="Enter Identity" asp-for="PassengerIdentity">
+    </div>
+    <div class="col-auto">
+        <label class="visually-hidden">Cinsiyet:</label>
+        <select class="form-select" asp-for="PassengerGender">
+            <option value="Kadın">Kadın</option>
+            <option value="Erkek">Erkek</option>
+        </select>
+    </div>
+    <div class="col-auto">
+        <label class="visually-hidden">Mail:</label>
+        <input type="text" class="form-control" placeholder="Mail Adresinizi Giriniz." asp-for="PassengerMail">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Book this seat!!</button>
+    </div>
+</form>*@
